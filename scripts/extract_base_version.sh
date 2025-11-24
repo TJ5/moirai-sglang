@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 # Extract base version from a tag by removing pre-release suffixes
 # Example: v0.10.0rc1 -> v0.10.0
 # Example: v1.2.3-alpha2 -> v1.2.3
