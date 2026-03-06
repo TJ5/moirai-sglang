@@ -1,6 +1,6 @@
+
 ARG BASE_IMAGE=ord.ocir.io/idqj093njucb/official-sgl:v0.5.8.post1.15156b7-cu129
 FROM ${BASE_IMAGE}
 
-# Bake in the draft model so runtime can use:
-#   --speculative-draft-model-path /draft-models/nvidia/gpt-oss-120b-Eagle3-long-context
-COPY gpt-oss-120b-Eagle3-long-context /draft-models/nvidia/gpt-oss-120b-Eagle3-long-context
+ARG DRAFT_MODEL_IMAGE_PATH=/draft-models/nvidia/gpt-oss-120b-Eagle3-long-context
+COPY . ${DRAFT_MODEL_IMAGE_PATH}
